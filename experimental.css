@@ -1,0 +1,109 @@
+
+/* /////////////////////////// RAINBOW BORDER WITH RADIUS> */
+
+.box {
+  height: 231px;
+  width: 231px;
+    /* //display: ; */
+    /* height: 30vw; */
+    /* width: 30vw; */
+    /* min-width: 300px;
+    min-height: 300px; */
+    margin: auto;
+    /* padding: 60px; */
+    position: relative;
+    max-width: 60vw;
+    /* bottom: 196px; */
+  }
+  .box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%; 
+    padding: 7px; 
+    background:var(--circle-rgb); 
+    /* mask: none; */
+    mask:inherit;
+    -webkit-mask: 
+       linear-gradient(#fff 0 0) content-box, 
+       linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude; 
+  }
+.colors{
+ color: #5b1d63;
+ background-color: #fffc54;
+
+}
+
+
+
+
+/* /////////////////// THE CODE FOR THE "GLIMPSE INTO THE SITE FEATURE.... */
+/* DEPRECATED>... rather using images -> with hyperlink. (considering animated gif's)
+
+@media (max-width:768px) {
+  .contact-image{
+  display:none;
+}
+  .box{
+      display:none;
+  }
+  .service-item-image{
+      display: none;
+  }
+}
+
+.wrap {
+  width: 1920px;
+  height: 1080px;
+  padding: 0;
+  overflow: hidden;
+  
+}
+
+.scaled-frame {
+  width: 1920px;
+  height: 1080px;
+  border: 0px;
+  transition: 2s;
+  border-radius: 50px;
+  position:relative
+}
+
+.scaled-frame {
+  zoom: 0.2;
+  transform: scale(0.2);
+  transform-origin: 0 0;
+  -moz-transform: scale(0.2);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(0.2);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(0.2);
+  -webkit-transform-origin: 0 0;
+}
+
+/*.scaled-frame:hover{
+  overflow: hidden;
+
+  transform: scale(.2);
+  z-index: 4;
+  border-color: rgb(0, 179, 119);
+  border-width: 4px;
+  box-shadow: 0 0 40px aquamarine;
+  position: fixed;
+  
+   top: 50%; 
+   left: 50%; 
+  transform: translate(-50%,-50%);
+  max-height: 80vh;
+  max-width: 80vw;
+  border-radius: 0;
+}* /
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .scaled-frame {
+    zoom: 1;
+  }
+}  
+*/

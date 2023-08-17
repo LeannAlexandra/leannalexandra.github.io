@@ -1,0 +1,283 @@
+:root{
+    --default-rgb: linear-gradient(76.0001deg, 
+    rgb(211, 253, 184), 
+    rgb(182, 252, 213), 
+    rgb(166, 233, 241), 
+    rgb(170, 203, 255), 
+    rgb(191, 177, 249), 
+    rgb(221, 165, 225),
+    rgb(246, 174, 195));
+    --circle-rgb:conic-gradient(76.0001deg, 
+    rgb(211, 253, 184), 
+    rgb(182, 252, 213), 
+    rgb(166, 233, 241), 
+    rgb(170, 203, 255), 
+    rgb(191, 177, 249), 
+    rgb(221, 165, 225),
+    rgb(246, 174, 195));
+    --default-transition: 100ms;
+    --clr-background: rgb(239, 239, 239);
+    --line-width:30vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+    user-select: none;
+    --washout-rgb: var(--default-rgb);
+    --clr-charcoal: rgb(93,93,93);
+    --clr-center: hotpink;
+    --clr-centerWashout: salmon;
+}
+/* ///////////////////HIDING THE SCROLLBAR COMPLETELY WITHOUT STOPPPING THE Y OVERFLOW */
+/* ///////////////////////////////////////////TRACKBAR ON THE Y AXIS////////////////////// */
+::-webkit-scrollbar {
+    width: 0px;
+    /* transition: 200ms; */
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--clr-primary);
+    border-radius: 30px;
+    /* width: 20px; */
+    max-height: 20px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--clr-accent);
+  
+  }
+  
+  
+  
+
+  
+body{
+    color:var(--clr-charcoal);
+    /* background: radial-gradient(white, transparent),var(--washout-rgb); */
+    background: radial-gradient(rgba(255, 255, 255, 1),transparent),var(--washout-rgb);
+    min-height: 100vh;
+    transition: var(--default-transition);
+    text-align: center;
+}
+.profile-pic{
+    position: absolute;
+    bottom: 170px;
+    z-index: 1;
+}
+
+.introh1{
+    position: relative;
+    z-index: 1;
+}
+
+ul{
+    list-style-type: none ;
+}
+.service-item{
+    line-height: 4;
+}
+a:link{
+    text-decoration: none;
+    color: var(--clr-charcoal);
+}
+a:visited{
+    text-decoration: none;
+    color: var(--clr-charcoal);
+}
+.services-row{
+    text-decoration: none;
+    margin: 5%;
+}
+.profile-image{
+    width: 229px;
+    border-radius: 50%;
+}
+ 
+#leanna{
+    border-radius: 50%;
+    transition: 600ms;
+    scale: 1.5 0;   
+} 
+
+#topText, #catchphrase, #introLineBreak{
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 0 10px white;
+}
+.intro
+{
+    /* margin-top: 20vh; */
+    height: 70vh;
+    text-align: center;
+    /* background: radial-gradient(circle at center,transparent 30%, white 30%, white 31%, transparent 31%); */
+   background: transparent;
+    /* background: none; */
+    transition: 1000ms;
+    /* ,var(--circle-rgb); */
+    /* //min-height: 450px; */
+    
+    /* background: var(--default-rgb); */
+        
+}
+/* Instead of the below hover; it needs to be eased into and eased out of in javascript      */
+/* .intro:hover
+{
+    background: 
+        radial-gradient(circle at 45% 35%,rgba(255, 255, 255, 0.2) 3%, transparent 10%),
+        radial-gradient(circle at center, transparent 20%, rgba(255, 255, 255, 0.2) 30.2%,transparent 30.2%),
+        radial-gradient(circle at center,rgba(255, 255, 255, 0.2) 10%, transparent 30%, white 30%, white 34%, transparent 45%);    
+    transition: 1000ms;
+} */
+.margin-x{
+    margin: 0 30px;
+}
+
+nav{
+    /* position:sticky; */
+    background: var(--default-rgb);
+    transition: 100ms;
+    box-shadow: 0 0px 50px 2px rgba(0, 0, 0, 0.2), inset 0px -30px 52px rgba(255, 255, 255, 0.6), 0 0 60px rgba(92, 92, 92, 0.2);
+}
+footer{
+    text-align: center;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    transition: var(--default-transition);
+    
+    background: var(--default-rgb);
+}
+i{
+    font-size: 1.5rem;
+    color:var(--clr-centerWashout);
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+i:hover{
+    color: var(--clr-center);
+}
+.introblock
+{
+    margin-top:30vh;
+    /* border-style: solid;
+    border-radius: 20px; */
+    border-image: var(--circle-rgb) 1;
+    
+    min-height: 30vh;
+    transition: var(--default-transition)
+    /* margin-bottom:10vh; */
+}
+.spacer{
+    height: 50px;
+    /* background: var(--clr-center); */
+}
+
+.linebreak{
+    margin: 0 auto;
+    height: 5px;
+    border-radius: 5px;
+    width: var(--line-width);
+    background: var(--default-rgb);
+    transition: var(--default-transition)
+}
+/* 
+.linebreak:hover{
+    transform: scale(1.2);
+}
+h1:hover{
+    transform: scale(1.01);
+} */
+
+.placeholderDiv{
+    height: 100px;
+    width: 100vw;
+    
+   
+
+/* 
+    border-radius: 25px;
+    border-style: solid;
+    border-image: var(--circle-rgb); */
+}
+/* .circleLoading{
+    margin: 50px auto 0;
+    /* height: 200px; */
+    /* width: 200px; *
+    border: 3px solid;
+    /* //border-radius: 50%; *
+    border-image-slice: 1;
+    border-image-source: var(--circle-rgb);
+} */
+.contactCard{
+    /* height: fit-content; */
+    /* min-height: 900px; */
+    border-radius: 20px;
+    margin: 60px auto;
+    padding: 160px 0;
+}
+.brand{
+    filter:
+    drop-shadow( 0 0 10px rgb(255, 255, 255));
+}
+.contact-image{
+    /* width: inherit; */
+   width: 229px;
+    border-radius: 50%;
+    /* margin-left: 0px; */
+}
+.contact-info{
+    padding:0;
+    margin: 0;
+}
+.marginleft{
+    margin-left: -12px;
+}
+.hidden{
+    display: none;
+}
+.service-item-image{
+    max-width: 200px;
+}.service-description{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+
+.fa-brands:hover{
+    text-shadow: 0 0 10px white;
+}
+.project-preview{
+    max-width: 100%;
+}
+.contact-image-frame{
+    display: none;
+}
+.subheadding{
+    line-height: 0.6;
+    margin-top: 0;
+    display: none;
+   /* // color: green; */
+}
+.list-item-flex{
+color: red;
+text-align: left;
+}
+
+@media (min-width:768px) {
+    .contact-image-frame{
+        display:inline-block;
+    }
+    .subheadding{
+        display:inline-block;
+    }
+    .intro
+{
+    /* background: none; */
+    background: 
+    radial-gradient(circle at 45% 35%,rgba(255, 255, 255, 0.8) 3%, transparent 10%),
+    radial-gradient(circle at center, transparent 20%, rgba(255, 255, 255, 0.2) 30.2%,transparent 30.2%),
+    radial-gradient(circle at center,rgba(255, 255, 255, 0.6) 10%, transparent 30%, white 30%, white 34%, transparent 45%);
+
+}
+}
