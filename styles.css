@@ -222,9 +222,21 @@ h1:hover{
 }
 .contact-image{
     /* width: inherit; */
-   width: 229px;
+   width: 230px;
     border-radius: 50%;
+    filter: drop-shadow(0 0 25px rgb(255, 255, 255));
     /* margin-left: 0px; */
+   /* // border-color: rgba(255, 255, 255, 0.356);
+    //border-width: 6px;
+    border-style: solid; */
+}
+.img-hor {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
 }
 .contact-info{
     padding:0;
